@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { AuthProvider } from '@/context/AuthContext';
+import OnboardingScreen from '@/components/OnboardingScreen';
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -33,6 +34,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <AuthProvider>
+          <OnboardingScreen />
           <Navbar />
           <main className="flex-1 flex flex-col">
             {children}
@@ -43,3 +45,4 @@ export default function RootLayout({
     </html>
   );
 }
+
