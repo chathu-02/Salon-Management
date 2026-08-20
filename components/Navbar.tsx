@@ -55,8 +55,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -85,14 +85,14 @@ export default function Navbar() {
           </Link>
 
           {/* 2. Center Floating Navigation Menu */}
-          <div className="hidden lg:flex items-center bg-black/40 border border-white/10 backdrop-blur-md rounded-full px-3 py-1.5 shadow-inner space-x-1">
+          <div className="hidden xl:flex items-center bg-black/40 border border-white/10 backdrop-blur-md rounded-full px-2.5 py-1.5 shadow-inner space-x-1 shrink-0">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`relative px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
+                  className={`relative px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
                     isActive
                       ? "bg-[#B38B4D] text-[#021a12] font-bold shadow-[0_0_15px_rgba(179,139,77,0.5)]"
                       : "text-white/75 hover:text-[#F5F5F0] hover:bg-white/5"
@@ -107,7 +107,7 @@ export default function Navbar() {
             {user && (
               <Link
                 href={getRoleDashboardLink()}
-                className={`flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all ${
+                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all shrink-0 ${
                   pathname.startsWith('/owner') || pathname.startsWith('/reception') || pathname.startsWith('/client')
                     ? "bg-[#B38B4D]/30 text-[#B38B4D] border border-[#B38B4D]"
                     : "text-white/80 hover:text-[#B38B4D] hover:bg-white/5"
@@ -119,49 +119,38 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* 3. Right Action Controls (Cleanly aligned to the right) */}
-          <div className="hidden md:flex items-center space-x-3.5 ml-auto lg:ml-0">
+          {/* 3. Right Action Controls (Clean, minimal & non-overlapping) */}
+          <div className="hidden md:flex items-center space-x-2.5 shrink-0 ml-auto xl:ml-0">
             {user ? (
-              <div className="flex items-center space-x-3 bg-black/40 border border-[#B38B4D]/30 py-1.5 pl-3 pr-2 rounded-full backdrop-blur-md shadow-lg">
-                <div className="w-7 h-7 rounded-full bg-[#B38B4D]/20 border border-[#B38B4D]/50 flex items-center justify-center text-xs font-bold text-[#B38B4D]">
-                  {user.name.charAt(0)}
-                </div>
-                <div className="flex flex-col pr-1">
-                  <span className="text-xs font-bold text-[#F5F5F0] leading-none truncate max-w-[110px]">
-                    {user.name}
-                  </span>
-                  <div className="mt-0.5">{getRoleBadge()}</div>
-                </div>
-
-                <button
-                  onClick={() => logout()}
-                  title="Log out"
-                  className="p-1.5 rounded-full text-white/60 hover:text-red-400 hover:bg-red-500/10 transition-colors"
-                >
-                  <LogOut className="w-4 h-4" />
-                </button>
-              </div>
+              <button
+                onClick={() => logout()}
+                title="Sign Out"
+                className="px-4 py-2 rounded-full bg-white/5 hover:bg-red-500/15 text-white/70 hover:text-red-400 border border-white/10 hover:border-red-500/30 text-xs font-semibold uppercase tracking-wider transition-all flex items-center space-x-2"
+              >
+                <LogOut className="w-3.5 h-3.5" />
+                <span>Sign Out</span>
+              </button>
             ) : (
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 shrink-0">
                 <Link
                   href="/login"
-                  className="text-xs uppercase tracking-wider font-semibold text-white/80 hover:text-[#B38B4D] px-4 py-2 rounded-full hover:bg-white/5 transition-all"
+                  className="text-xs uppercase tracking-wider font-semibold text-white/80 hover:text-[#B38B4D] px-3.5 py-2 rounded-full hover:bg-white/5 transition-all shrink-0"
                 >
                   Log In
                 </Link>
                 <Link
                   href="/register"
-                  className="text-xs uppercase tracking-wider font-semibold text-[#B38B4D] border border-[#B38B4D]/50 hover:border-[#B38B4D] hover:bg-[#B38B4D]/10 px-4 py-2 rounded-full transition-all shadow-[0_0_10px_rgba(179,139,77,0.15)]"
+                  className="text-xs uppercase tracking-wider font-semibold text-[#B38B4D] border border-[#B38B4D]/50 hover:border-[#B38B4D] hover:bg-[#B38B4D]/10 px-3.5 py-2 rounded-full transition-all shadow-[0_0_10px_rgba(179,139,77,0.15)] shrink-0"
                 >
                   Register
                 </Link>
               </div>
             )}
 
-            {/* Inquire CTA Button (Redirects to Contact Us) */}
+            {/* Inquire CTA Button */}
             <Link
               href="/contact"
-              className="btn-3d uppercase tracking-wider text-xs font-bold px-7 py-2.5 rounded-full bg-gradient-to-r from-[#B38B4D] via-[#c59e5f] to-[#B38B4D] bg-[length:200%_auto] animate-shimmer-btn text-[#021a12] flex items-center space-x-2 shadow-[0_0_20px_rgba(179,139,77,0.35)] hover:shadow-[0_0_30px_rgba(179,139,77,0.5)] transition-all"
+              className="btn-3d uppercase tracking-wider text-xs font-bold px-5 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-[#B38B4D] via-[#c59e5f] to-[#B38B4D] bg-[length:200%_auto] animate-shimmer-btn text-[#021a12] flex items-center space-x-2 shadow-[0_0_20px_rgba(179,139,77,0.35)] hover:shadow-[0_0_30px_rgba(179,139,77,0.5)] transition-all shrink-0"
             >
               <span>Inquire</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#021a12]" />

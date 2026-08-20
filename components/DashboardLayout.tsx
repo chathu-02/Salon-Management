@@ -192,50 +192,8 @@ export default function DashboardLayout({
           })}
         </nav>
 
-        {/* Quick Role Switcher Demo Bar (For rapid evaluation of RBAC) */}
-        <div className="p-4 bg-black/40 border-t border-white/10 m-3 rounded-2xl">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[#B38B4D]">
-              Demo Role Switcher
-            </span>
-            <Sparkles className="w-3 h-3 text-[#B38B4D]" />
-          </div>
-          <div className="grid grid-cols-3 gap-1.5 text-[10px] font-semibold">
-            <button
-              onClick={() => switchDemoAccount('OWNER')}
-              className={`py-1.5 px-2 rounded-lg border transition-all ${
-                user.role === 'OWNER'
-                  ? 'bg-amber-500 text-black border-amber-400 font-bold'
-                  : 'bg-white/5 text-white/70 border-white/10 hover:border-amber-400/50 hover:bg-amber-400/10'
-              }`}
-            >
-              Owner
-            </button>
-            <button
-              onClick={() => switchDemoAccount('RECEPTIONIST')}
-              className={`py-1.5 px-2 rounded-lg border transition-all ${
-                user.role === 'RECEPTIONIST'
-                  ? 'bg-emerald-500 text-black border-emerald-400 font-bold'
-                  : 'bg-white/5 text-white/70 border-white/10 hover:border-emerald-400/50 hover:bg-emerald-400/10'
-              }`}
-            >
-              Reception
-            </button>
-            <button
-              onClick={() => switchDemoAccount('CLIENT')}
-              className={`py-1.5 px-2 rounded-lg border transition-all ${
-                user.role === 'CLIENT'
-                  ? 'bg-blue-500 text-black border-blue-400 font-bold'
-                  : 'bg-white/5 text-white/70 border-white/10 hover:border-blue-400/50 hover:bg-blue-400/10'
-              }`}
-            >
-              Client
-            </button>
-          </div>
-        </div>
-
         {/* Logout */}
-        <div className="p-4 border-t border-white/10">
+        <div className="p-4 border-t border-white/10 mt-auto">
           <button
             onClick={() => logout()}
             className="flex items-center space-x-3 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-red-400 hover:bg-red-500/10 hover:border-red-500/20 border border-transparent transition-all"

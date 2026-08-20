@@ -73,12 +73,7 @@ function LoginContent() {
         
         {/* Header Badge & Title */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center space-x-2 bg-[#021a12] border border-[#B38B4D]/40 rounded-full px-4 py-1.5 mb-4 shadow-lg">
-            <Sparkles className="w-4 h-4 text-[#B38B4D]" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#B38B4D]">
-              Secure Role-Based Portal
-            </span>
-          </div>
+          
           <h1 className="text-3xl sm:text-4xl font-bold text-[#F5F5F0] font-serif">
             Welcome to <span className="text-[#B38B4D] italic">The Crown</span>
           </h1>

@@ -148,7 +148,7 @@ export default function Home() {
                   href="/about"
                   className="btn-3d inline-flex items-center space-x-2.5 bg-gradient-to-r from-[#B38B4D] to-[#c59e5f] text-[#021a12] font-bold text-sm px-7 py-3.5 rounded-full"
                 >
-                  <span>Learn more about our salon</span>
+                  <span>Discover The Crown Atelier</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
