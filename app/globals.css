@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #032B1E; /* Midnight Emerald */
+  --foreground: #F5F5F0; /* Soft Ivory */
+
+  --primary: #B38B4D; /* Antique Gold */
+  --primary-foreground: #032B1E;
+
+  --secondary: #021a12; /* Darker Emerald for nav/sidebar */
+  --secondary-foreground: #F5F5F0;
+
+  --muted: #04422e; /* Lighter Emerald for subtle backgrounds */
+  --muted-foreground: #aab5b0;
+
+  --border: #B38B4D; /* Antique Gold */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #032B1E;
+    --foreground: #F5F5F0;
+
+    --primary: #B38B4D;
+    --primary-foreground: #032B1E;
+
+    --secondary: #021a12;
+    --secondary-foreground: #F5F5F0;
+
+    --muted: #04422e;
+    --muted-foreground: #aab5b0;
+
+    --border: #B38B4D;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--font-montserrat), Arial, Helvetica, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(9, 9, 11, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Marquee Animation Utilities */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
 }
