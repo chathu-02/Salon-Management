@@ -12,28 +12,6 @@
       "created_at": "2026-01-01T00:00:00.000Z"
     },
     {
-      "id": "usr-reception-1",
-      "name": "Elena Rostova",
-      "email": "receptionist@thecrown.com",
-      "password_hash": "$2b$10$8GIZ7lbKhFS4nt53k6TxSu.FUdd6VDLZU9sDG91eHpcuZ1gpqLwbu",
-      "role": "RECEPTIONIST",
-      "phone": "+94 77 234 5678",
-      "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop",
-      "is_active": true,
-      "created_at": "2026-01-02T00:00:00.000Z"
-    },
-    {
-      "id": "usr-reception-2",
-      "name": "Marco Silva",
-      "email": "marco@thecrown.com",
-      "password_hash": "$2b$10$8GIZ7lbKhFS4nt53k6TxSu.FUdd6VDLZU9sDG91eHpcuZ1gpqLwbu",
-      "role": "RECEPTIONIST",
-      "phone": "+94 77 345 6789",
-      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop",
-      "is_active": true,
-      "created_at": "2026-01-10T00:00:00.000Z"
-    },
-    {
       "id": "usr-client-1",
       "name": "Sophia Vance",
       "email": "client@thecrown.com",
@@ -65,6 +43,39 @@
       "avatar_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300&auto=format&fit=crop",
       "is_active": true,
       "created_at": "2026-02-01T00:00:00.000Z"
+    },
+    {
+      "name": "Ann",
+      "email": "anny@gmail.com",
+      "password_hash": "$2b$10$rvOqBVs1rdTv5Ub3tiogyO3GJsWI74N8n26UXoEcO.3p0Az5YnMUa",
+      "role": "CLIENT",
+      "phone": "7685412397",
+      "avatar_url": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&auto=format&fit=crop",
+      "is_active": true,
+      "id": "usr-1787222730922-wd4q",
+      "created_at": "2026-08-20T10:45:30.922Z"
+    },
+    {
+      "name": "Chathumi",
+      "email": "chathumihewamaramage@gmail.com",
+      "password_hash": "$2b$10$SSzgUg2lG6JPfZJIcZvAjuZgDUKInDJilnjJYvD6gkx9ehL6.Abrm",
+      "role": "CLIENT",
+      "phone": "0715351530",
+      "avatar_url": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&auto=format&fit=crop",
+      "is_active": true,
+      "id": "usr-1787222852594-ws4l",
+      "created_at": "2026-08-20T10:47:32.594Z"
+    },
+    {
+      "name": "THARA",
+      "email": "receptionist@thecrown.com",
+      "password_hash": "$2b$10$3EwAPy3qqIJnMSMvO.lEzOPAGIdiJungwPKGtRdAzJvqeCkA9PPku",
+      "role": "RECEPTIONIST",
+      "phone": "0715351530",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop",
+      "is_active": true,
+      "id": "usr-1787223485302-as14",
+      "created_at": "2026-08-20T10:58:05.302Z"
     }
   ],
   "services": [
